@@ -14,7 +14,7 @@ from collections import OrderedDict
 app = Flask(__name__)
 
 @app.route('/spellCorrect/<name>')
-def hello_name(name):
+def check(name):
     try:
         name = re.split('[^a-zA-Z]', name)
         spell = SpellChecker()
